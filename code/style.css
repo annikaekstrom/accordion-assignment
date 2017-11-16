@@ -4,10 +4,13 @@ html {
 }
 .description {
   display: none;
+  max-height: 0;
+overflow: hidden;
+transition: max-height 0.5s ease-out;
 }
 .active + .description {
-display: block;
-color: #8190e0;
+  display: block;
+  color: #8190e0;
 }
 .title {
   color: #9fcb9f;
@@ -38,11 +41,8 @@ color: #8190e0;
     content: "add";
 }
 .active::before  {
-content: "remove";
-color: #8190e0;
-}
-.title:nth-child(odd) {
-  color: red;
+  content: "remove";
+  color: #8190e0;
 }
 .title:hover {
   color: #8da78d;
